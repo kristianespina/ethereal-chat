@@ -31,4 +31,4 @@ const ChatListItem = ({ name, isSelected }: Props) => {
   );
 };
 
-export default ChatListItem;
+export default React.memo(ChatListItem);

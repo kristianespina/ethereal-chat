@@ -12,4 +12,4 @@ const SidebarContent = () => {
   );
 };
 
-export default SidebarContent;
+export default React.memo(SidebarContent);

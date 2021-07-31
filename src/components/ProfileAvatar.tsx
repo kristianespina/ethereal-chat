@@ -7,6 +7,8 @@ type Props = {
   size: string;
 };
 
-export default function ProfileAvatar({ name, src, size }: Props) {
+const ProfileAvatar = ({ name, src, size }: Props) => {
   return <Avatar name={name} src={src} size={size} />;
-}
+};
+
+export default React.memo(ProfileAvatar);

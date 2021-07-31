@@ -22,4 +22,4 @@ const InputMessage = () => {
   );
 };
 
-export default InputMessage;
+export default React.memo(InputMessage);

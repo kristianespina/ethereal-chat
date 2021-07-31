@@ -33,4 +33,4 @@ const Profile = ({ name, status }: Props) => {
   );
 };
 
-export default Profile;
+export default React.memo(Profile);

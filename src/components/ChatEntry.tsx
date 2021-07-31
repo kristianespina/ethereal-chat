@@ -18,4 +18,4 @@ const ChatEntry = ({ sender, message }: Props) => {
   );
 };
 
-export default ChatEntry;
+export default React.memo(ChatEntry);
