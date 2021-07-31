@@ -1,23 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Flex, Center } from "@chakra-ui/layout";
-import { Input, Text, Button, FormControl, Divider } from "@chakra-ui/react";
-type Props = {
-  toggle: Function;
-};
-const LoginBox = ({ toggle }: Props) => {
+import { Flex } from "@chakra-ui/layout";
+import { Input, Text, Button, FormControl } from "@chakra-ui/react";
+
+const RegisterBox = () => {
   const handleLogin = () => {};
   return (
     <Flex direction="column" gridGap={4} justifyContent="center" height="100%">
       <FormControl>
         <Text fontWeight="bold" fontSize="2xl">
-          Login to continue
+          Create an account
         </Text>
         <Input size="lg" variant="filled" placeholder="Email address" mt={4} />
         <Input
           size="lg"
           variant="filled"
           placeholder="Password"
+          type="password"
+          mt={4}
+        />
+        <Input
+          size="lg"
+          variant="filled"
+          placeholder="Confirm Password"
           type="password"
           mt={4}
         />
@@ -29,23 +34,11 @@ const LoginBox = ({ toggle }: Props) => {
           w="full"
           onSubmit={handleLogin}
         >
-          Login
+          Register
         </Button>
-
-        <Divider mt={4} />
-        <Center>
-          <Button
-            colorScheme="blue"
-            variant="link"
-            mt={4}
-            onClick={() => toggle()}
-          >
-            Create an account
-          </Button>
-        </Center>
       </FormControl>
     </Flex>
   );
 };
 
-export default LoginBox;
+export default RegisterBox;
