@@ -21,7 +21,9 @@ const ChatListItem = ({ name, isSelected }: Props) => {
       <Flex direction="row">
         <ProfileAvatar name={name} src="" size="md" />
         <Box w="100%" pl={4}>
+          {/* Name of Chat Participant */}
           <Text fontWeight="bold">{name}</Text>
+          {/* Status */}
           <Text fontSize="sm" color="gray.700">
             16m ago
           </Text>

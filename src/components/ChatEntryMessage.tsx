@@ -3,16 +3,19 @@ import React from "react";
 
 type Props = {
   message: string;
-  isSenderSelf: boolean;
+  isSenderSelf?: boolean;
 };
 const ChatEntryMessage = ({ message, isSenderSelf }: Props) => {
-  const bgColor = isSenderSelf ? "blue.500" : "white";
+  const bgColor = isSenderSelf ? "cyan.700" : "white";
+  const fontColor = isSenderSelf ? "white" : "black";
 
   return (
     <Box
       bgColor={bgColor}
+      color={fontColor}
       p={3}
       maxW={[64, 64, 96, 96]}
+      borderRadius={12}
       _hover={{ cursor: "pointer", boxShadow: "md" }}
     >
       {message}

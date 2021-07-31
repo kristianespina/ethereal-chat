@@ -21,14 +21,26 @@ const ChatBox = () => {
             mb={4}
           >
             <ChatEntry sender="Kristian Espina" message="Hello World" />
+            <ChatEntry
+              sender="Kristian Espina"
+              message="Hello World"
+              isSenderSelf={true}
+            />
+            <ChatEntry sender="Kristian Espina" message="Hello World" />
+            <ChatEntry
+              sender="Kristian Espina"
+              message="Hello World"
+              isSenderSelf={true}
+            />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
+            <ChatEntry
+              sender="Kristian Espina"
+              message="Hello World"
+              isSenderSelf={true}
+            />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
             <ChatEntry sender="Kristian Espina" message="Hello World" />
             <ChatEntry
