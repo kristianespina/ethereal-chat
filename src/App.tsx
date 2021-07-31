@@ -1,15 +1,18 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
-import { Flex } from "@chakra-ui/layout";
-
 import Message from "./pages/Message";
+import Login from "./pages/Login";
 
 function App() {
   return (
-    <Flex>
-      <Message />
-    </Flex>
+    <Router>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Message} />
+      </Switch>
+    </Router>
   );
 }
 
