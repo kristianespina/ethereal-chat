@@ -52,7 +52,7 @@ const RegisterBox = () => {
         );
         toast({
           title: "Success",
-          description: "You have successfully logged in.",
+          description: "Account created",
           status: "success",
           duration: 9000,
           isClosable: true,
