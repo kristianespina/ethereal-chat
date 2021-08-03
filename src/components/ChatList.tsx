@@ -9,13 +9,6 @@ const ChatList = () => {
       <ChatListItem name="John Doe" isSelected={false} />
       <ChatListItem name="Hollegrehen" isSelected={false} />
       <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
     </div>
   );
 };

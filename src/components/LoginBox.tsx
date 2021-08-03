@@ -8,6 +8,7 @@ import {
   Divider,
   useToast,
 } from "@chakra-ui/react";
+import { useHistory } from "react-router-dom";
 
 import { updateUser } from "../features/user/userSlice";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
@@ -21,6 +22,7 @@ type Props = {
 const LoginBox = ({ toggle }: Props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
   const toast = useToast();
 
   const dispatch = useAppDispatch();
@@ -32,6 +34,7 @@ const LoginBox = ({ toggle }: Props) => {
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
+
   const handleLogin = async () => {
     try {
       const response = await postLogin(email, password);
@@ -53,6 +56,7 @@ const LoginBox = ({ toggle }: Props) => {
           isClosable: true,
           position: "top",
         });
+        history.push("/");
       }
     } catch ({ response }) {
       const message = response.data;
