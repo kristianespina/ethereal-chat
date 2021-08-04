@@ -17,6 +17,7 @@ const ChatBox = () => {
   useEffect(() => {
     console.log("Received", messages);
     console.log(onlineUsers);
+    // eslint-disable-next-line
   }, [messages]);
 
   useEffect(() => {

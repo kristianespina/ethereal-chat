@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Center } from "@chakra-ui/layout";
-import {
-  Input,
-  Text,
-  Button,
-  FormControl,
-  Divider,
-  useToast,
-} from "@chakra-ui/react";
+import { Input, Text, Button, Divider, useToast } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React from "react";
 import ChatList from "./ChatList";
 
 const Conversations = () => {

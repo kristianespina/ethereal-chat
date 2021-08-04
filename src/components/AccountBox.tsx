@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import { Flex, Center } from "@chakra-ui/layout";
-import { Input, Text, Button, FormControl, Divider } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/layout";
 import RegisterBox from "./RegisterBox";
 import LoginBox from "./LoginBox";
 

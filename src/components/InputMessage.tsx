@@ -6,7 +6,6 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  FormControl,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 

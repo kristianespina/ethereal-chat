@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Spacer } from "@chakra-ui/react";
 import { Flex } from "@chakra-ui/layout";
 import ProfileAvatar from "./ProfileAvatar";
 import ChatEntryMessage from "./ChatEntryMessage";
