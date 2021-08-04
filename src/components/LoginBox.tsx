@@ -44,6 +44,7 @@ const LoginBox = ({ toggle }: Props) => {
         dispatch(
           updateUser({
             email: user.email,
+            displayName: user.displayName,
             level: user.level,
             token: token,
           })

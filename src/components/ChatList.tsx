@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useAppSelector, useAppDispatch } from "../app/hooks";
+
+import { updateOnlineUsers } from "../features/chat/chatSlice";
 
 import ChatListItem from "./ChatListItem";
 
 const ChatList = () => {
+  const dispatch = useAppDispatch();
+  const { socket } = useAppSelector((state) => state.connection);
+  const { onlineUsers } = useAppSelector((state) => state.chat);
+
+  useEffect(() => {
+    // Get Online Users
+    socket?.on("onlineUsers", (onlineUsers) => {
+      dispatch(updateOnlineUsers(onlineUsers));
+    });
+  }, [socket, dispatch]);
+
+  useEffect(() => {
+    console.log(onlineUsers);
+  }, [onlineUsers]);
   return (
     <div>
-      <ChatListItem name="Kristian Espina" isSelected={true} />
-      <ChatListItem name="John Doe" isSelected={false} />
-      <ChatListItem name="Hollegrehen" isSelected={false} />
-      <ChatListItem name="Kafra Employee" isSelected={false} />
+      {onlineUsers?.map((user) => (
+        <ChatListItem name={user.displayName} isSelected={false} />
+      ))}
     </div>
   );
 };

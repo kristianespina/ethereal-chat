@@ -25,7 +25,7 @@ const ChatListItem = ({ name, isSelected }: Props) => {
           <Text fontWeight="bold">{name}</Text>
           {/* Status */}
           <Text fontSize="sm" color="gray.700">
-            16m ago
+            Online
           </Text>
         </Box>
       </Flex>

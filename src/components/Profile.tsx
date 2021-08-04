@@ -6,7 +6,7 @@ import ProfileAvatar from "./ProfileAvatar";
 import { Button, Text, Container } from "@chakra-ui/react";
 
 type Props = {
-  name: string;
+  name?: string;
   status: string;
 };
 

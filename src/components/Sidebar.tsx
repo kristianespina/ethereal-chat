@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Socket } from "socket.io-client";
 import {
   Flex,
   Drawer,
@@ -16,7 +16,10 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import SidebarContent from "./SidebarContent";
 
-const Sidebar = () => {
+type Props = {
+  socket?: Socket;
+};
+const Sidebar = ({ socket }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
 

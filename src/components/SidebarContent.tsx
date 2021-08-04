@@ -1,12 +1,15 @@
 import React from "react";
+import { useAppSelector } from "../app/hooks";
 
 import Profile from "./Profile";
 import Conversations from "./Conversations";
 
 const SidebarContent = () => {
+  const { displayName } = useAppSelector((state) => state.user);
+
   return (
     <>
-      <Profile name="Kristian Espina" status="Active Now" />
+      <Profile name={displayName} status="Active Now" />
       <Conversations />
     </>
   );
