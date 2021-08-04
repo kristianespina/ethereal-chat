@@ -24,7 +24,7 @@ const Profile = ({ name, status }: Props) => {
           <Text fontSize="sm" fontWeight="bold" color="gray.400" mt={0}>
             {status}
           </Text>
-          <Button colorScheme="blue" w="100%" mt={8} size="sm">
+          <Button colorScheme="linkedin" w="100%" mt={8} size="sm">
             Chat Preferences
           </Button>
         </Container>

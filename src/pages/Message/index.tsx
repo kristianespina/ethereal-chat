@@ -30,7 +30,8 @@ const Messages = () => {
     }
 
     // Create socket.io connection
-    const socket = io("ws://localhost:4000");
+    const socket_url: string = process.env.REACT_APP_SOCKET_URL || "";
+    const socket = io(socket_url);
     socket.auth = {
       token: user.token,
     };
