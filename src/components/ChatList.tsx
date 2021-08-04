@@ -18,12 +18,16 @@ const ChatList = () => {
   }, [socket, dispatch]);
 
   useEffect(() => {
-    console.log(onlineUsers);
+    console.log("Online Users:", onlineUsers?.length);
   }, [onlineUsers]);
   return (
     <div>
       {onlineUsers?.map((user) => (
-        <ChatListItem name={user.displayName} isSelected={false} />
+        <ChatListItem
+          key={user.email}
+          name={user.displayName}
+          isSelected={false}
+        />
       ))}
     </div>
   );

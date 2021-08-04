@@ -1,37 +1,30 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useEffect } from "react";
 import { Flex, Box } from "@chakra-ui/react";
 
 import ChatEntry from "./ChatEntry";
 import InputMessage from "./InputMessage";
 
-import { Entry, Message } from "../types/chat";
+import { Message } from "../types/chat";
 
-import { useAppSelector } from "../app/hooks";
+import { addMessage } from "../features/chat/chatSlice";
+import { useAppSelector, useAppDispatch } from "../app/hooks";
 
 const ChatBox = () => {
-  const [chat, setChat] = useState<Entry[]>([]);
+  const dispatch = useAppDispatch();
   const { socket } = useAppSelector((state) => state.connection);
+  const { onlineUsers, messages } = useAppSelector((state) => state.chat);
 
-  const addMessage = useCallback(
-    (message) => {
-      setChat([...chat, message]);
-    },
-    [chat]
-  );
+  useEffect(() => {
+    console.log("Received", messages);
+    console.log(onlineUsers);
+  }, [messages]);
+
   useEffect(() => {
     // On Message Listener
     socket?.on("message", ({ sender, destination, payload }: Message) => {
-      addMessage({ sender, payload });
+      dispatch(addMessage({ sender, destination, payload }));
       console.log({ sender, destination, payload });
     });
-
-    setTimeout(() => {
-      const _message: Message = {
-        destination: "onelespina@gmail.com",
-        payload: { type: "chat", content: "Hello World" },
-      };
-      socket?.send(_message);
-    }, 3000);
     // eslint-disable-next-line
   }, [socket]);
 
@@ -51,37 +44,16 @@ const ChatBox = () => {
             flexGrow={1}
             mb={4}
           >
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry
-              sender="Kristian Espina"
-              message="Hello World"
-              isSenderSelf={true}
-            />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry
-              sender="Kristian Espina"
-              message="Hello World"
-              isSenderSelf={true}
-            />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry
-              sender="Kristian Espina"
-              message="Hello World"
-              isSenderSelf={true}
-            />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry sender="Kristian Espina" message="Hello World" />
-            <ChatEntry
-              sender="John Doe"
-              message="Hello WorldWorldWorldWorldWorldWorldWorldWorldWorldWorldWorldWorldWorldWorld"
-            />
-            <ChatEntry
-              sender="Hollegrehen"
-              message="Hello WorldWorldWorldWorldWorld"
-            />
+            {messages?.map(({ sender, payload }, index) => (
+              <ChatEntry
+                key={index}
+                sender={
+                  onlineUsers?.find((user) => user.email === sender)
+                    ?.displayName
+                }
+                message={payload.content}
+              />
+            ))}
           </Flex>
           <InputMessage />
         </Flex>

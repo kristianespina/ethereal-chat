@@ -6,8 +6,8 @@ import ProfileAvatar from "./ProfileAvatar";
 import ChatEntryMessage from "./ChatEntryMessage";
 
 type Props = {
-  sender: string;
-  message: string;
+  sender?: string;
+  message?: string;
   isSenderSelf?: boolean;
 };
 

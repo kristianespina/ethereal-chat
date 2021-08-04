@@ -118,6 +118,7 @@ const RegisterBox = () => {
           mt={9}
           borderRadius={99}
           w="full"
+          type="submit"
           onSubmit={handleRegister}
           onClick={handleRegister}
         >

@@ -8,6 +8,7 @@ import {
   Divider,
   useToast,
 } from "@chakra-ui/react";
+import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
 import { updateUser } from "../features/user/userSlice";
@@ -20,6 +21,7 @@ type Props = {
 };
 
 const LoginBox = ({ toggle }: Props) => {
+  const { handleSubmit } = useForm();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -77,7 +79,7 @@ const LoginBox = ({ toggle }: Props) => {
   }, [user]);
   return (
     <Flex direction="column" gridGap={4} justifyContent="center" height="100%">
-      <FormControl>
+      <form onSubmit={handleSubmit(handleLogin)}>
         <Text fontWeight="bold" fontSize="2xl">
           Login to continue
         </Text>
@@ -102,8 +104,7 @@ const LoginBox = ({ toggle }: Props) => {
           mt={9}
           borderRadius={99}
           w="full"
-          onSubmit={handleLogin}
-          onClick={handleLogin}
+          type="submit"
         >
           Login
         </Button>
@@ -119,7 +120,7 @@ const LoginBox = ({ toggle }: Props) => {
             Create an account
           </Button>
         </Center>
-      </FormControl>
+      </form>
     </Flex>
   );
 };

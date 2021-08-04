@@ -13,6 +13,7 @@ export type Payload = {
 };
 export type ChatState = {
   onlineUsers?: User[];
+  messages?: Message[];
 };
 export type User = {
   email: string;

@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {
-  message: string;
+  message?: string;
   isSenderSelf?: boolean;
 };
 const ChatEntryMessage = ({ message, isSenderSelf }: Props) => {

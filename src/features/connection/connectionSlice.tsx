@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../../app/store";
 
 import { Socket } from "socket.io-client";
 import { ConnectionState } from "../../types/connection";
