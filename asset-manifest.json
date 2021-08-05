@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/kristianespina.github.io/ethereal-chat/static/css/main.56cda763.chunk.css",
-    "main.js": "/kristianespina.github.io/ethereal-chat/static/js/main.a8bc714c.chunk.js",
-    "main.js.map": "/kristianespina.github.io/ethereal-chat/static/js/main.a8bc714c.chunk.js.map",
-    "runtime-main.js": "/kristianespina.github.io/ethereal-chat/static/js/runtime-main.28d0ef74.js",
-    "runtime-main.js.map": "/kristianespina.github.io/ethereal-chat/static/js/runtime-main.28d0ef74.js.map",
-    "static/js/2.7c22b801.chunk.js": "/kristianespina.github.io/ethereal-chat/static/js/2.7c22b801.chunk.js",
-    "static/js/2.7c22b801.chunk.js.map": "/kristianespina.github.io/ethereal-chat/static/js/2.7c22b801.chunk.js.map",
-    "static/js/3.8203ccc5.chunk.js": "/kristianespina.github.io/ethereal-chat/static/js/3.8203ccc5.chunk.js",
-    "static/js/3.8203ccc5.chunk.js.map": "/kristianespina.github.io/ethereal-chat/static/js/3.8203ccc5.chunk.js.map",
-    "index.html": "/kristianespina.github.io/ethereal-chat/index.html",
-    "static/css/main.56cda763.chunk.css.map": "/kristianespina.github.io/ethereal-chat/static/css/main.56cda763.chunk.css.map",
-    "static/js/2.7c22b801.chunk.js.LICENSE.txt": "/kristianespina.github.io/ethereal-chat/static/js/2.7c22b801.chunk.js.LICENSE.txt",
-    "static/media/construction.3b356196.svg": "/kristianespina.github.io/ethereal-chat/static/media/construction.3b356196.svg"
+    "main.css": "/ethereal-chat/static/css/main.56cda763.chunk.css",
+    "main.js": "/ethereal-chat/static/js/main.a8bc714c.chunk.js",
+    "main.js.map": "/ethereal-chat/static/js/main.a8bc714c.chunk.js.map",
+    "runtime-main.js": "/ethereal-chat/static/js/runtime-main.24c3433b.js",
+    "runtime-main.js.map": "/ethereal-chat/static/js/runtime-main.24c3433b.js.map",
+    "static/js/2.5d53c4a6.chunk.js": "/ethereal-chat/static/js/2.5d53c4a6.chunk.js",
+    "static/js/2.5d53c4a6.chunk.js.map": "/ethereal-chat/static/js/2.5d53c4a6.chunk.js.map",
+    "static/js/3.8203ccc5.chunk.js": "/ethereal-chat/static/js/3.8203ccc5.chunk.js",
+    "static/js/3.8203ccc5.chunk.js.map": "/ethereal-chat/static/js/3.8203ccc5.chunk.js.map",
+    "index.html": "/ethereal-chat/index.html",
+    "static/css/main.56cda763.chunk.css.map": "/ethereal-chat/static/css/main.56cda763.chunk.css.map",
+    "static/js/2.5d53c4a6.chunk.js.LICENSE.txt": "/ethereal-chat/static/js/2.5d53c4a6.chunk.js.LICENSE.txt",
+    "static/media/construction.3b356196.svg": "/ethereal-chat/static/media/construction.3b356196.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.28d0ef74.js",
-    "static/js/2.7c22b801.chunk.js",
+    "static/js/runtime-main.24c3433b.js",
+    "static/js/2.5d53c4a6.chunk.js",
     "static/css/main.56cda763.chunk.css",
     "static/js/main.a8bc714c.chunk.js"
   ]
