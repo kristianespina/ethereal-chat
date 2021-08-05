@@ -13,6 +13,7 @@ const ChatBox = () => {
   const dispatch = useAppDispatch();
   const { socket } = useAppSelector((state) => state.connection);
   const { onlineUsers, messages } = useAppSelector((state) => state.chat);
+  const { email } = useAppSelector((state) => state.user);
 
   useEffect(() => {
     console.log("Received", messages);
@@ -53,6 +54,7 @@ const ChatBox = () => {
                     ?.displayName
                 }
                 message={payload.content}
+                isSenderSelf={email === sender ? true : false}
               />
             ))}
           </Flex>
