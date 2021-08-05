@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login" component={Login} />
-        <Route path="/" component={Message} />
+        <Route path="/ethereal-chat/login" component={Login} />
+        <Route path="/ethereal-chat/" component={Message} />
       </Switch>
     </Router>
   );
